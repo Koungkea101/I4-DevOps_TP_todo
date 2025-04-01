@@ -10,20 +10,22 @@ import javax.swing.*;
  */
 public class App {
     public static void main(String[] args) {
-        // Set the look and feel to FlatLaf for a modern appearance
+        System.out.println("Starting Application...");
+    
         try {
             UIManager.setLookAndFeel(new FlatLightLaf());
         } catch (UnsupportedLookAndFeelException e) {
             e.printStackTrace();
         }
-        
-        // Use SwingUtilities to ensure GUI is created on the Event Dispatch Thread
+    
         SwingUtilities.invokeLater(() -> {
+            System.out.println("Launching GUI...");
             TodoFrame frame = new TodoFrame();
             frame.setVisible(true);
+            System.out.println("Hello, World!!!!");
         });
-        System.out.println(" Hello world!!!!");
     }
+    
 }
 
 // mvn exec:java -Dexec.mainClass="com.mycompany.app.App"
