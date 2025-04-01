@@ -22,5 +22,8 @@ public class App {
             TodoFrame frame = new TodoFrame();
             frame.setVisible(true);
         });
+        System.out.println(" Hello world!!!!");
     }
 }
+
+// mvn exec:java -Dexec.mainClass="com.mycompany.app.App"
